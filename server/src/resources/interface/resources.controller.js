@@ -1,9 +1,14 @@
-import { CreateResourceCommand } from '../aplication/commands/create-resource.command.js';
-import { CreateResourceHandler } from '../aplication/commands/create-resource.handler.js';
+import { CreateResourceCommand } from '../application/commands/create-resource.command.js';
+import { CreateResourceHandler } from '../application/commands/create-resource.handler.js';
+import { GetResourceQuery } from '../application/queries/get-resource.query.js';
+import { GetResourceHandler } from '../application/queries/get-resource.handler.js';
 
 export const resourcesController = (router) => {
-  router.get('/resources', (req, res) => {
-    res.send('resources is working.');
+  router.get('/resources/:id', async (req, res) => {
+    const query = new GetResourceQuery({...req.params});
+    const handler = new GetResourceHandler();
+    const result = await handler.handle(query);
+    res.status(200).send(result);
   });
 
   router.post('/resources', (req, res) => {
