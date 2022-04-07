@@ -4,4 +4,8 @@ export class Factory {
   static create({ id, name }) {
     return new Resource({ id, name });
   }
+
+  static reconstitute({ id, name }) {
+    return new Resource({ id, name });
+  }
 }
