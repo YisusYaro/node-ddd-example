@@ -1,8 +1,8 @@
 export class Resource {
-  constructor({ id, name, status }) {
+  constructor({ id, name, status = 'status' }) {
     this.id = id;
     this.name = name;
-    this.status = status || 'status';
+    this.status = status; 
   }
 
   toProperties() {

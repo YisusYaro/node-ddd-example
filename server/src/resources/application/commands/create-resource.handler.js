@@ -2,8 +2,8 @@ import { Factory } from '../../domain/factory.js';
 import { ResourceRepository } from '../../infraestructure/resources.repository.js';
 
 export class CreateResourceHandler {
-  constructor(){
-    this.resourceRepository = new ResourceRepository();
+  constructor(resourceRepository = new ResourceRepository()) {
+    this.resourceRepository = resourceRepository;
   }
 
   async handle(command) {
