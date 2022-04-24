@@ -1,20 +1,22 @@
 import { CreateResourceCommand } from '../application/commands/create-resource.command.js';
-import { CreateResourceHandler } from '../application/commands/create-resource.handler.js';
 import { GetResourceQuery } from '../application/queries/get-resource.query.js';
-import { GetResourceHandler } from '../application/queries/get-resource.handler.js';
+import { AppContainer } from '../../shared/infraestructure/dependency-injection/app-container.js';
 
 export const resourcesController = (router) => {
+  const queryBus = AppContainer.getInstance().getContainer().get('QueryBus');
+  const commandBus = AppContainer.getInstance()
+    .getContainer()
+    .get('CommandBus');
+
   router.get('/resources/:id', async (req, res) => {
-    const query = new GetResourceQuery({...req.params});
-    const handler = new GetResourceHandler();
-    const result = await handler.handle(query);
+    const query = new GetResourceQuery({ ...req.params });
+    const result = await queryBus.execute(query);
     res.status(200).send(result);
   });
 
-  router.post('/resources', (req, res) => {
+  router.post('/resources', async (req, res) => {
     const command = new CreateResourceCommand({ ...req.body });
-    const handler = new CreateResourceHandler();
-    handler.handle(command);
+    await commandBus.execute(command);
     res.sendStatus(204);
   });
 };
