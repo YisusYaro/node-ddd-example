@@ -22,7 +22,7 @@ docker exec -it server-container npm run start
 
 ## Open your browser 🚀
 
-[localhost:2567](http://localhost:3000)
+[localhost:3000](http://localhost:3000)
 
 ## Devs ✒️
 
