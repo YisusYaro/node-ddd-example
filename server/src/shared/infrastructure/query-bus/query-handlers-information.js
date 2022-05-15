@@ -1,5 +1,5 @@
 import { AppContainer } from '../dependency-injection/app-container.js';
-import { registerResourcesQueries } from '../../../resources/infraestructure/dependency-injection/register.queries.js';
+import { registerResourcesQueries } from '../../../resources/infrastructure/dependency-injection/register.queries.js';
 
 export class QueryHandlersInformation {
   #queryHandlersMap;

@@ -1,6 +1,6 @@
 import { CreateResourceCommand } from '../application/commands/create-resource.command.js';
 import { GetResourceQuery } from '../application/queries/get-resource.query.js';
-import { AppContainer } from '../../shared/infraestructure/dependency-injection/app-container.js';
+import { AppContainer } from '../../shared/infrastructure/dependency-injection/app-container.js';
 
 export const resourcesController = (router) => {
   const queryBus = AppContainer.getInstance().getContainer().get('QueryBus');

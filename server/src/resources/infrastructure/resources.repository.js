@@ -1,4 +1,4 @@
-import { MongoRepository } from '../../shared/infraestructure/mongo-repository.js';
+import { MongoRepository } from '../../shared/infrastructure/mongo-repository.js';
 import { Factory } from '../domain/factory.js';
 
 export class ResourceRepository extends MongoRepository { 

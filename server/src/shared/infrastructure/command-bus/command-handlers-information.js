@@ -1,5 +1,5 @@
 import { AppContainer } from '../dependency-injection/app-container.js';
-import { registerResourcesCommands } from '../../../resources/infraestructure/dependency-injection/register.commands.js';
+import { registerResourcesCommands } from '../../../resources/infrastructure/dependency-injection/register.commands.js';
 
 export class CommandHandlersInformation {
   #commandHandlersMap;

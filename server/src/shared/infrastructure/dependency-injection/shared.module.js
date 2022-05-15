@@ -5,7 +5,7 @@ import { QueryHandlersInformation } from '../query-bus/query-handlers-informatio
 import { EventBus } from '../event-bus/event-bus.js';
 import { EventHandlersInformation } from '../event-bus/event-handlers-information.js';
 
-const setInfraestructure = (container) => {
+const setInfrastructure = (container) => {
   container.register('CommandHandlersInformation', CommandHandlersInformation);
   
   container.register('QueryHandlersInformation', QueryHandlersInformation);
@@ -26,5 +26,5 @@ const setInfraestructure = (container) => {
 };
 
 export const setSharedModule = (container) => {
-  setInfraestructure(container);
+  setInfrastructure(container);
 };

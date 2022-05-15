@@ -26,11 +26,11 @@ const setApplication = (container) => {
   setEventsHandlers(container);
 };
 
-const setInfraestructure = (container) => {
+const setInfrastructure = (container) => {
   container.register('ResourceRepository', ResourceRepository);
 };
 
 export const setResourcesModule = (container) => {
-  setInfraestructure(container);
+  setInfrastructure(container);
   setApplication(container);
 };

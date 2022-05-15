@@ -1,4 +1,4 @@
-import { AppContainer } from '../infraestructure/dependency-injection/app-container.js';
+import { AppContainer } from '../infrastructure/dependency-injection/app-container.js';
 
 export class AggregateRoot {
   eventBus;

@@ -1,5 +1,5 @@
 import { AppContainer } from '../dependency-injection/app-container.js';
-import { registerResourcesEvents } from '../../../resources/infraestructure/dependency-injection/register.events.js';
+import { registerResourcesEvents } from '../../../resources/infrastructure/dependency-injection/register.events.js';
 
 export class EventHandlersInformation {
   #eventHandlersMap;

@@ -1,6 +1,6 @@
 import { ContainerBuilder } from 'node-dependency-injection';
 import { setSharedModule } from './shared.module.js';
-import { setResourcesModule } from '../../../resources/infraestructure/dependency-injection/resources.module.js';
+import { setResourcesModule } from '../../../resources/infrastructure/dependency-injection/resources.module.js';
 
 export class AppContainer {
   static #instace;
