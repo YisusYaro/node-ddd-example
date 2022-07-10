@@ -8,11 +8,11 @@ services:
   server-service:
     image: docker.jesusyaro.com/server
     build:
-      context: ./server
+      context: ./
       dockerfile: ./Dockerfile-dev
     container_name: server-container
     volumes:
-      - ./server/:/usr/src/app
+      - ./:/usr/src/app
     ports:
       - '3000:3000'
     stdin_open: true
