@@ -1,11 +1,10 @@
-# RestApiNodeExample
+# Node driven domain example
 
 Rest api node example using driven domain design and cqrs.
 
 ## Dev enviroment using node 📦
 
 ```
-cd server
 npm i
 npm run start
 ```
@@ -34,3 +33,4 @@ docker exec -it server-container npm run start
 This project is under the License described in the file [LICENSE](LICENSE)
 
 ---
+⌨️ with ❤️
